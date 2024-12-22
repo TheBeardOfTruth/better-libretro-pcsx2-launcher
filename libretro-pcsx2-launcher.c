@@ -143,10 +143,13 @@ bool retro_load_game(const struct retro_game_info *info)
    //It's remarkably unlikely to be longer than 64 chars
    //I've never seen a CAPS version of pcsx2-qt but w/e
    char *basename[64] = {"pcsx2", "PCSX2", "pcsx2-qt", "PCSX2-qt", "PCSX2-QT", "flatpak run net.pcsx2.PCSX2"};
+
+   //commandline parameters extracted for ease-of-modification
    char cmdl[256] = "-fullscreen";
    #ifdef USE_BIG_PICTURE
-   sprintf(cmdl, "%s %s", cmdl, "-bigpicture");
+   sprintf(cmdl, "%s -bigpicture", cmdl);
    #endif
+
    #ifdef NOGUI
    sprintf(cmdl, "%s %s", cmdl, "-nogui");
    #endif
