@@ -146,6 +146,7 @@ bool retro_load_game(const struct retro_game_info *info)
 
    //commandline parameters extracted for ease-of-modification
    char cmdl[256] = "-fullscreen";
+
    #ifdef USE_BIG_PICTURE
    sprintf(cmdl, "%s -bigpicture", cmdl);
    #endif
@@ -157,7 +158,7 @@ bool retro_load_game(const struct retro_game_info *info)
    char command[4096] = "";
 
    for(int i = 0; i < 4; i++) {
-      printf("cmdl: %s\n",cmdl);
+      printf("command: %s\n",command);
       printf("Attempting to launch %s...\n", basename[i]);
       // Check if there is content to load.
       if (info != NULL && info->path != NULL && info->path[0] != '\0') {
