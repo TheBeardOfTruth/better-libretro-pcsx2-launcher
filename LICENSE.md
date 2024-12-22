@@ -28,4 +28,4 @@ Additional copyrights:
 
 > Copyright (C) 2024 [Andreas Björkman](https://github.com/TheBeardOfTruth)
 
-> Copyright (C) 2017 [Eduardo Mozard de Oliviera](https://github.com/eduardomozart)
+> Copyright (C) 2017 [Eduardo Mozard de Oliviera](https://github.com/eduardomozart) & [Alcaro](https://github.com/Alcaro)

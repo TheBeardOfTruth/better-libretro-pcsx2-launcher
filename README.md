@@ -43,3 +43,4 @@ Launch Sony PlayStation 2 games through [PCSX2](https://pcsx2.net/), directly fr
 - [Rob Loach](http://github.com/robloach)
 - [Alcaro](https://github.com/Alcaro)
 - [Eduardo Mozart de Oliveira](https://github.com/coldscientist)
+- [Andreas Björkman](https://github.com/TheBeardOfTruth)
