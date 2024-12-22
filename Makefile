@@ -1,3 +1,4 @@
+USE_BIG_PICTURE := ${PCSX2L_USE_BIG_PICTURE}
 STATIC_LINKING := 0
 AR             := ar
 
@@ -105,6 +106,8 @@ endif
 
 LDFLAGS += $(LIBM)
 
+ifeq ($(PCSX2L_USE_BIG_PICTURE), 1)
+	CFLAGS += -DUSE_BIG_PICTURE
 ifeq ($(DEBUG), 1)
    CFLAGS += -O0 -g
 else
