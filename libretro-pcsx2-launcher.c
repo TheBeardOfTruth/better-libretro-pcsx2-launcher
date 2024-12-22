@@ -150,28 +150,24 @@ bool retro_load_game(const struct retro_game_info *info)
    #ifdef USE_BIG_PICTURE
    sprintf(cmdl, "%s -bigpicture", cmdl);
    #endif
-
-   #ifdef NOGUI
-   sprintf(cmdl, "%s %s", cmdl, "-nogui");
-   #endif
    //command string, built from basename and parameters.
    char command[4096] = "";
 
    for(int i = 0; i < 4; i++) {
-      printf("command: %s\n",command);
       printf("Attempting to launch %s...\n", basename[i]);
       // Check if there is content to load.
       if (info != NULL && info->path != NULL && info->path[0] != '\0') {
          //parameters changed at some point in the last few years
          //sprintf(command, "%s --fullscreen --nogui -- \"%s\"", basename[i], info->path);
          //new paramters
-         sprintf(command, "%s %s -- \"%s\"", basename[i], cmdl, info->path);
+         sprintf(command, "%s %s -nogui -- \"%s\"", basename[i], cmdl, info->path);
       }
       else
       {
          //this is kind of an ugly way of doing things but it DOES launch a pcsx2 window
          sprintf(command, "%s %s --", basename[i], cmdl);
       }
+      printf("command: %s\n",command);
       // Check if running PCSX2 works.
       if (system(command) == 0) {
          if(i == 5) { // Flatpak
