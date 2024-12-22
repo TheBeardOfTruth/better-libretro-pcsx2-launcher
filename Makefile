@@ -108,6 +108,7 @@ LDFLAGS += $(LIBM)
 
 ifeq ($(PCSX2L_USE_BIG_PICTURE), 1)
 	CFLAGS += -DUSE_BIG_PICTURE
+endif
 ifeq ($(DEBUG), 1)
    CFLAGS += -O0 -g
 else
