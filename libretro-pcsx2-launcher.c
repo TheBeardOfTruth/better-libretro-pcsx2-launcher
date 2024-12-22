@@ -153,12 +153,11 @@ bool retro_load_game(const struct retro_game_info *info)
    for(int i = 0; i < 4; i++) {
       printf("Attempting to launch %s...\n", basename[i]);
       // Check if there is content to load.
-      if (info != NULL && info->path != NULL && info->path[0] != '\0') {
-         //parameters changed at some point in the last few years
-         //sprintf(command, "%s --fullscreen --nogui -- \"%s\"", basename[i], info->path);
-         //new paramters
-         sprintf(command, "%s %s -- \"%s\"", basename[i], cmdl, info->path);
-      }
+      info != NULL && info->path != NULL && info->path[0] != '\0');
+      //parameters changed at some point in the last few years
+      //sprintf(command, "%s --fullscreen --nogui -- \"%s\"", basename[i], info->path);
+      //new paramters
+      sprintf(command, "%s %s -- \"%s\"", basename[i], cmdl, info->path);
 
       // Check if running PCSX2 works.
       if (system(command) == 0) {
