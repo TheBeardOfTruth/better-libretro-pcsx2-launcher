@@ -161,7 +161,7 @@ bool retro_load_game(const struct retro_game_info *info)
       }
       else
       {
-         sprintf(command, "%s %s --", basename[i], cmdl, info->path);
+         sprintf(command, "%s %s --", basename[i], cmdl);
       }
       // Check if running PCSX2 works.
       if (system(command) == 0) {
