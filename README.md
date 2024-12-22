@@ -4,11 +4,14 @@ A fork of [PCSX2 Launcher](https://github.com/eduardomozart/libretro-pcsx2-launc
 
 Current changes:
 
-- respects more canonical binary strings
-- easier to extend
-- doesn't use special cases for launching flatpak simplifying the logic.
-- corrected source code comments to correctly refer to PCSX2 and added some additional info in some cases
-- corrected file names to refer to PCSX2
+- Unbroke the old one (cmdl were wrong so it wouldn't even launch PCSX2 even with nonstandard path accounted for)
+- Can now launch PCSX2 UI from retroarch without *having* to load a game.
+- Rudimentary support for changing preferences at build time (e.g and currently only support for building with -bigpicture, export `PCSX2L_NO_BIG_PICTURE` if you don't want big picture)
+- Respects more canonical binary strings
+- Easier to extend/maintain
+- Doesn't use special cases for launching flatpak simplifying the logic.
+- Corrected source code comments to correctly refer to PCSX2 and added some additional info in some cases
+- Corrected file names to refer to PCSX2
 
 Future changes:
 - see todo.md

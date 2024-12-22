@@ -147,7 +147,7 @@ bool retro_load_game(const struct retro_game_info *info)
    //commandline parameters extracted for ease-of-modification
    char cmdl[256] = "-fullscreen";
 
-   #ifdef USE_BIG_PICTURE
+   #ifndef NO_BIG_PICTURE
    char tmp[256] = "";
    //ugly as hell but works
    sprintf(tmp, "%s", cmdl);
