@@ -150,8 +150,8 @@ bool retro_load_game(const struct retro_game_info *info)
    #ifndef NO_BIG_PICTURE
    char tmp[256] = "";
    //ugly as hell but works
-   sprintf(tmp, "%s", cmdl);
-   sprintf(cmdl, "%s -bigpicture", tmp);
+   snprintf(tmp, 256, "%s", cmdl);
+   snprintf(cmdl, 256, "%s -bigpicture", tmp);
    #endif
    //command string, built from basename and parameters.
    char command[4096] = "";
@@ -161,14 +161,14 @@ bool retro_load_game(const struct retro_game_info *info)
       // Check if there is content to load.
       if (info != NULL && info->path != NULL && info->path[0] != '\0') {
          //parameters changed at some point in the last few years
-         //sprintf(command, "%s --fullscreen --nogui -- \"%s\"", basename[i], info->path);
+         //snprintf(command, 4096, "%s --fullscreen --nogui -- \"%s\"", basename[i], info->path);
          //new paramters
-         sprintf(command, "%s %s -nogui -- \"%s\"", basename[i], cmdl, info->path);
+         snprintf(command, 4096, "%s %s -nogui -- \"%s\"", basename[i], cmdl, info->path);
       }
       else
       {
          //this is kind of an ugly way of doing things but it DOES launch a pcsx2 window
-         sprintf(command, "%s %s --", basename[i], cmdl);
+         snprintf(command, 4096, "%s %s --", basename[i], cmdl);
       }
       puts(command);
       // Check if running PCSX2 works.
