@@ -148,7 +148,9 @@ bool retro_load_game(const struct retro_game_info *info)
    char cmdl[256] = "-fullscreen";
 
    #ifdef USE_BIG_PICTURE
-   sprintf(cmdl, "%s -bigpicture", cmdl);
+   char tmp[256] = "";
+   sprintf(tmp, "%s", cmdl);
+   sprintf(cmdl, "%s -bigpicture", tmp);
    #endif
    //command string, built from basename and parameters.
    char command[4096] = "";
@@ -167,7 +169,7 @@ bool retro_load_game(const struct retro_game_info *info)
          //this is kind of an ugly way of doing things but it DOES launch a pcsx2 window
          sprintf(command, "%s %s --", basename[i], cmdl);
       }
-      printf("command: %s\n",command);
+      puts(command);
       // Check if running PCSX2 works.
       if (system(command) == 0) {
          if(i == 5) { // Flatpak
