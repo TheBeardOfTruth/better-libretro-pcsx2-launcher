@@ -17,7 +17,7 @@ Future changes:
 - see todo.md
 
 
-Launch Sony PlayStation 2 games through [PCSX2](https://pcsx2.net/), directly from [RetroArch](http://www.libretro.com/).
+Launch Sony PlayStation 2 games through [PCSX2](https://pcsx2.net/), directly from [RetroArch](http://www.libretro.com/)!
 
 ![PCSX2 launcher screenshot](screenshot.png)
 
@@ -32,26 +32,27 @@ Launch Sony PlayStation 2 games through [PCSX2](https://pcsx2.net/), directly fr
 
 2. Copy the core file to the RetroArch cores directory
   ``` bash
-  cp dolphin_launcher_libretro.so /usr/lib/libretro/pcsx2_launcher_libretro.so
-  cp dolphin_launcher_libretro.info /usr/share/libretro/info/pcsx2_launcher_libretro.info
+  cp pcsx2_launcher_libretro.so /usr/lib/libretro/pcsx2_launcher_libretro.so
+  cp pcsx2_launcher_libretro.info /usr/share/libretro/info/pcsx2_launcher_libretro.info
   ```
 
 3. Make sure [PCSX2](https://pcsx2.net/) [is installed](https://pcsx2.net/download.html). You should be able to run at least one of the following commands:
   ``` bash
   pcsx2
+  pcsx2-qt
+  PCSX2
+  PCSX2-QT
   flatpak run net.pcsx2.PCSX2
   ```
 
 ## Usage
 
-1. Scan Sony PlayStation 2 games in RetroArch
-
-2. Launch the games directly from the RetroArch menu
-
-3. Alternatively, you can run games through the command line
-  ``` bash
-  retroarch -L pcsx2_launcher_libretro.so Crash.iso
-  ```
+- Load the core in retroarch
+  - Start the core to use PCSX2's UI
+  - Load a game from retroarch's UI
+- You can also load the core directly via commandline
+  - `retroarch -L pcsx2_launcher_libretro.so`
+  - `retroarch -L pcsx2_launcher_libretro.so /path/to/game.iso`
 
 ## Contributors
 
