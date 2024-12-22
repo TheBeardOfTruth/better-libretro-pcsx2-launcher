@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
     - Added more canonical strings (e.g pcsx2-qt)
     - Added todo.md for tracking future additions
+    - Ability to load PCSX2 without a game from retroarch
 
 ## 1.1.1 - 2017-06-18
 ### Fixed

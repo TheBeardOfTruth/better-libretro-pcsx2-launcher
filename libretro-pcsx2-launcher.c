@@ -149,6 +149,7 @@ bool retro_load_game(const struct retro_game_info *info)
 
    #ifdef USE_BIG_PICTURE
    char tmp[256] = "";
+   //ugly as hell but works
    sprintf(tmp, "%s", cmdl);
    sprintf(cmdl, "%s -bigpicture", tmp);
    #endif
