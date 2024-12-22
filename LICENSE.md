@@ -1,6 +1,6 @@
 # License
 
-[Dolphin Launcher](https://github.com/robloach/libretro-dolphin-launcher) is released under the MIT License:
+[better PCSX2 Launcher](https://github.com/TheBeardOfTruth/better-libretro-pcsx2-launcher) was forked from [PCSX2 Launcher](https://github.com/eduardomozart/libretro-pcsx2-launcher) (which itself is a fork of [Dolphin Launcher](https://github.com/robloach/libretro-dolphin-launcher)) and is released under the MIT License:
 
 > Copyright (C) 2016 [Rob Loach](http://robloach.net)
 >
@@ -22,3 +22,10 @@
 > LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 > OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 > WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+Additional copyrights:
+
+> Copyright (C) 2024 [Andreas Björkman](https://github.com/TheBeardOfTruth)
+
+> Copyright (C) 2017 [Eduardo Mozard de Oliviera](https://github.com/eduardomozart)
