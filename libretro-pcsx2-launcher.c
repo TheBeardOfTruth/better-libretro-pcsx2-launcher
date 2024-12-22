@@ -142,7 +142,7 @@ bool retro_load_game(const struct retro_game_info *info)
    // canonical program strings.
    //It's remarkably unlikely to be longer than 64 chars
    //I've never seen a CAPS version of pcsx2-qt but w/e
-   char *basename[64] = {"pcsx2", "PCSX2", "pcsx2-qt", "PCSX2-qt", "PCSX2-QT", "flatpak run net.pcsx2.PCSX2"};
+   char *basename[64] = {"PCSX2", "pcsx2-qt", "pcsx2", "PCSX2-qt", "PCSX2-QT", "flatpak run net.pcsx2.PCSX2"};
 
    //commandline parameters extracted for ease-of-modification
    char cmdl[256] = "-fullscreen";
@@ -156,7 +156,7 @@ bool retro_load_game(const struct retro_game_info *info)
    //command string, built from basename and parameters.
    char command[4096] = "";
 
-   for(int i = 0; i < 4; i++) {
+   for(int i = 0; i <= 6; i++) {
       printf("Attempting to launch %s...\n", basename[i]);
       // Check if there is content to load.
       if (info != NULL && info->path != NULL && info->path[0] != '\0') {
