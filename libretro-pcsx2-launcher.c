@@ -147,7 +147,7 @@ bool retro_load_game(const struct retro_game_info *info)
    #ifdef USE_BIG_PICTURE
    sprintf(cmdl, "%s %s", cmdl, "-bigpicture");
    #endif
-   #ifdef USE_NOGUI
+   #ifdef NOGUI
    sprintf(cmdl, "%s %s", cmdl, "-nogui");
    #endif
    //command string, built from basename and parameters.
@@ -164,6 +164,7 @@ bool retro_load_game(const struct retro_game_info *info)
       }
       else
       {
+         //this is kind of an ugly way of doing things but it DOES launch a pcsx2 window
          sprintf(command, "%s %s --", basename[i], cmdl);
       }
       // Check if running PCSX2 works.
