@@ -1,6 +1,16 @@
 # libretro-pcsx2-launcher
 
-A fork of [PCSX2 Launcher](https://github.com/eduardomozart/libretro-pcsx2-launcher) (which itself is a fork of [Dolphin Launcher](https://github.com/robloach/libretro-dolphin-launcher))
+A fork of [PCSX2 Launcher](https://github.com/eduardomozart/libretro-pcsx2-launcher) (which itself is a fork of [Dolphin Launcher](https://github.com/robloach/libretro-dolphin-launcher)) that contains some modifications to enhance functionality on *nix (linux, really).
+
+Current changes:
+
+- respects more canonical binary strings
+- easier to extend
+- doesn't use special cases for launching flatpak simplifying the logic.
+
+Future changes:
+- see todo.md
+
 
 Launch Sony PlayStation 2 games through [PCSX2](https://pcsx2.net/), directly from [RetroArch](http://www.libretro.com/).
 
