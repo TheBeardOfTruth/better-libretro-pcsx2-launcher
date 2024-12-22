@@ -7,6 +7,8 @@ Current changes:
 - respects more canonical binary strings
 - easier to extend
 - doesn't use special cases for launching flatpak simplifying the logic.
+- corrected source code comments to correctly refer to PCSX2 and added some additional info in some cases
+- corrected file names to refer to PCSX2
 
 Future changes:
 - see todo.md

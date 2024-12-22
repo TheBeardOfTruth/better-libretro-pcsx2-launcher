@@ -143,6 +143,10 @@ bool retro_load_game(const struct retro_game_info *info)
    //It's remarkably unlikely to be longer than 64 chars
    //I've never seen a CAPS version of pcsx2-qt but w/e
    char *basename[64] = {"pcsx2", "PCSX2", "pcsx2-qt", "PCSX2-qt", "PCSX2-QT", "flatpak run net.pcsx2.PCSX2"};
+   char cmdl[256] = "-fullscreen -nogui";
+   #ifdef USE_BIG_PICTURE
+   sprintf(cmdl, "%s %s", cmdl, "-bigpicture");
+   #endif
    //command string, built from basename and parameters.
    char command[4096] = "";
 
@@ -150,7 +154,10 @@ bool retro_load_game(const struct retro_game_info *info)
       printf("Attempting to launch %s...\n", basename[i]);
       // Check if there is content to load.
       if (info != NULL && info->path != NULL && info->path[0] != '\0') {
-         sprintf(command, "%s --fullscreen --nogui \"%s\"", basename[i], info->path);
+         //parameters changed at some point in the last few years
+         //sprintf(command, "%s --fullscreen --nogui -- \"%s\"", basename[i], info->path);
+         //new paramters
+         sprintf(command, "%s %s -- \"%s\"", basename[i], cmdl, info->path);
       }
 
       // Check if running PCSX2 works.
