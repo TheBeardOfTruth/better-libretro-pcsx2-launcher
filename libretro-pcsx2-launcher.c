@@ -159,7 +159,10 @@ bool retro_load_game(const struct retro_game_info *info)
          //new paramters
          sprintf(command, "%s %s -- \"%s\"", basename[i], cmdl, info->path);
       }
-
+      else
+      {
+         sprintf(command, "%s %s --", basename[i], cmdl, info->path);
+      }
       // Check if running PCSX2 works.
       if (system(command) == 0) {
          if(i == 5) { // Flatpak
